@@ -1,0 +1,43 @@
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 750px;
+  @media(min-width: 400px){
+    justify-content: space-evenly;
+  }
+  .product{
+    width: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: .6;
+    //margin-right: 40px;
+    &__img{
+      width: 200px;
+      height: 200px;
+    }
+    &__title{
+      font-size: 1.3rem;
+    }
+    &__price{
+      font-weight: bold;
+    }
+    &__cart{
+      text-decoration: none;
+      //mix-blend-mode: difference;
+      display: block;
+      position: relative;
+      z-index: 5;
+      font-size: 1rem;
+      color: black;
+      transition: .1s;
+      &:hover{
+        color: $primary-highlight;
+      }
+
+
+
+    }
+  }
+}

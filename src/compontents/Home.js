@@ -1,29 +1,54 @@
 import React from "react";
 
-function Home() {
-    return (
-        <header className='header'>
-            <div className="header__logo">
-                <h2 className='header__logo--text'>J</h2>
-            </div>
-            <nav className='header__menu'>
-                <ul className='nav'>
-                    <li className='nav__item'>
-                        <a className='nav__link' href='#'>About</a>
-                    </li>
-                    <li className='nav__item'>
-                        <a className='nav__link' href='#'>Hoodies</a>
-                    </li>
-                    <li className='nav__item'>
-                        <a className='nav__link' href='#'>T-shirts</a>
-                    </li>
-                    <li className='nav__item'>
-                        <a className='nav__link' href='#'>Card</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
-}
+import s1 from '../assets/s1front.png'
+import s2 from '../assets/s2front.png'
+import s3 from '../assets/s3front.png'
+import s4 from '../assets/s4front.png'
+import s5 from '../assets/s5front.png'
+import s6 from '../assets/s6front.png'
 
-export default Home;
+const Home = () => {
+    return (
+        <div className="home">
+            <div className="product">
+                <img className='product__img' src={s1} alt='white t-shirt stoic-face'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+            <div className="product">
+                <img className='product__img' src={s2} alt='white t-shirt 2019-2020 sunrise'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+            <div className="product">
+                <img className='product__img' src={s3} alt='white t-shirt clouds'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+            <div className="product">
+                <img className='product__img' src={s4} alt='white t-shirt buddhism'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+            <div className="product">
+                <img className='product__img' src={s5} alt='white t-shirt landscape'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+            <div className="product">
+                <img className='product__img' src={s6} alt='white t-shirt point'/>
+                <p className='product__title'>Gray t-shirt</p>
+                <p className='product__price'>$50</p>
+                <a className='product__cart' href='#'> Add to cart</a>
+            </div>
+
+        </div>
+    )
+};
+
+export default Home
