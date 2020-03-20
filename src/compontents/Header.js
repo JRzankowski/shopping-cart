@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {connect} from 'react-redux'
+import {getNumbers} from "../actions/getAction";
 
-function Header() {
+function Header(props) {
+    useEffect(() => {
+        getNumbers()
+    }, []);
     return (
         <header className='header'>
             <div className="header__logo">
@@ -18,7 +23,7 @@ function Header() {
                         <a className='nav__link' href='#'>T-shirts</a>
                     </li>
                     <li className='nav__item'>
-                        <a className='nav__link' href='#'>Card</a>
+                        <a className='nav__link' href='#'>{`Card(${props.basketProps.basketNumbers})`}</a>
                     </li>
                 </ul>
             </nav>
@@ -26,4 +31,8 @@ function Header() {
     );
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    basketProps: state.basketState
+});
+
+export default connect(mapStateToProps, {getNumbers})(Header);
